@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html lang="en">
+<head>
+    <title>Nivo Slider Demo</title>
+	<!-- nivo START  -->
+    <link rel="stylesheet" href="nivo/themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="nivo/themes/light/light.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="nivo/themes/dark/dark.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="nivo/themes/bar/bar.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="nivo/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="nivo/demo/style.css" type="text/css" media="screen" />
+	<!-- nivo ENDE  -->
+</head>
+<body>
+    <div id="wrapper">
+        
+		<!-- nivo START  -->
+		<div class="slider-wrapper theme-bar">
+            <div id="slider" class="nivoSlider">
+                <img src="img/header1.jpg" data-thumb="header1.jpg" alt="" data-transition="sliceDownLeft" title="Das tolle Meer">
+                <img src="img/header2.jpg" data-thumb="header2.jpg" alt="" data-transition="sliceDownLeft">
+                <img src="img/header3.jpg" data-thumb="header3.jpg" alt="" data-transition="sliceDownLeft">
+             </div>
+
+        </div>
+		<!-- nivo ENDE  -->
+    </div>
+	<!-- nivo START  -->
+    <script type="text/javascript" src="nivo/demo/scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="nivo/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+	<!-- nivo ENDE  -->
+</body>
+</html>

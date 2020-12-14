@@ -1,0 +1,63 @@
+	$exemplarSign=$POST["exemplarSign"];
+		$exemplarMediumID=$POST["exemplarMediumID"];
+		$exemplarID=$POST["exemplarID"];
+		
+		$sql="
+	INSERT INTO exemplar 
+	(
+	exemplarID,
+	exemplarSign,
+	SELECT max(mediumID) FROM medium AS exemplarmediumID
+	)
+	
+	VALUES
+	(
+	:exemplarID,
+	:signatur,
+	:exemplarmediumID
+	)
+	
+	";
+	
+		$abfrage->bindParam(":exemplarID",$exemplarID);
+	$abfrage->bindParam(":signatur",$exemplarSign);
+	$abfrage->bindParam(":exemplarmediumID",$exemplarMediumID);
+	
+	Signatur:<br>
+<input type="text" name="exemplarSignatur" required<br>
+
+exemplarSign
+
+<link rel="stylesheet" href="css/font-awesome.css">
+
+
+<script type="text/javascript" src="./tinymce/tinymce.min.js"></script>
+<script>
+tinymce.init({
+    selector: "textarea",
+	toolbar: "fontsizeselect",
+    fontsize_formats: "8pt 10pt 12pt 14pt 18pt 24pt 36pt",	
+	 plugins: [
+        "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+        "searchreplace wordcount visualblocks visualchars code fullscreen",
+        "insertdatetime media nonbreaking save table contextmenu directionality",
+        "emoticons template paste textcolor"
+    ],	
+	toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+    toolbar2: "print preview media | forecolor backcolor emoticons font_formats",	
+});
+</script>
+
+
+INSERT INTO `medienverwaltung`.`medium` (`mediumID`, `mediumTitel`, `mediumVerf`, `mediumJahr`, `mediumOrt`, `mediumVerl`, `mediumArt`, `mediumNr`, `mediumSprache`, `mediumDescr`) VALUES (NULL, 'Test', 'Test', '', '', '', '', '', '', '');
+
+
+form>
+MediumID
+<input type="text" name="exemplarMediumID" value="<?php echo $mediumID ?>" ><br>
+
+Signatur:<br>
+<input type="text" name="exemplarSignatur" <br>
+<input type="submit" name="Signaturspeichern" <br>
+
+</form>
