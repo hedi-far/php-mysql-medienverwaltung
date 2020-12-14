@@ -23,7 +23,7 @@ Admin dashboard
 
 ![Admin dashboard](/screenshots/screenshot_admin_dashboard.jpg)
 
-Librarin dashboard
+Librarian dashboard
 
 ![Admin dashboard](/screenshots/screenshot_dashboard.jpg)
 
@@ -56,3 +56,22 @@ Database schema
 Database administration
 
 ![DB admin](/screenshots/screenshot_php_myadmin.jpg)
+
+## Instructions
+
+1. Download [XAMPP](https://www.apachefriends.org/de/index.html) and install it.
+2. Start XAMPP and start Apache and MySQL.
+3. Go to http://localhost/phpmyadmin/ and add a new account with all privileges.
+4. Rename the file "include_connection_xxx.php" to "include_connection.php" and add your login data.
+5. In phpMyAdmin, add a new database called "Medienverwaltung". Add a table "medium" and a table "user".
+
+'user' Table:
+
+![user table](/screenshots/screenshot_table_user.jpg)
+
+'medium' Table:
+
+![user table](/screenshots/screenshot_table_medium.jpg)
+
+6. Add a new user with user role 0 (admin user - this is a different user from the one you created above!).
+7. Go to http://localhost/php-mysql-medienverwaltung/login.php and login as admin user. From here, you can create new users as well as new database entries.
